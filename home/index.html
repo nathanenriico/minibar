@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frigobar do Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Frigobar do Hotel</h1>
+        <p>Escaneie o QR Code para acessar o catálogo.</p>
+        <div class="catalog">
+            <h2>Catálogo de Itens</h2>
+            <ul id="item-list">
+                <li>
+                    <span>Água Mineral</span>
+                    <span>R$ 5,00</span>
+                    <button onclick="addItem('Água Mineral', 5)">Adicionar</button>
+                </li>
+                <li>
+                    <span>Refrigerante</span>
+                    <span>R$ 7,00</span>
+                    <button onclick="addItem('Refrigerante', 7)">Adicionar</button>
+                </li>
+                <li>
+                    <span>Chocolate</span>
+                    <span>R$ 10,00</span>
+                    <button onclick="addItem('Chocolate', 10)">Adicionar</button>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <h2>Resumo do Consumo</h2>
+            <ul id="summary-list"></ul>
+            <p>Total: R$ <span id="total">0.00</span></p>
+            <button onclick="confirmConsumption()">Confirmar Consumo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
