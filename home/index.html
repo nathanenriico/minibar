@@ -9,7 +9,6 @@
 <body>
     <div class="container">
         <h1>Frigobar do Hotel</h1>
-        <p>Escaneie o QR Code para acessar o catálogo.</p>
         <div class="catalog">
             <h2>Catálogo de Itens</h2>
             <ul id="item-list">
@@ -34,9 +33,29 @@
             <h2>Resumo do Consumo</h2>
             <ul id="summary-list"></ul>
             <p>Total: R$ <span id="total">0.00</span></p>
+            
+            <!-- Campo para inserir número do apartamento -->
+            <label for="apartment-number">Número do Apartamento:</label>
+            <input type="text" id="apartment-number" placeholder="Informe o número do apartamento">
+            
             <button onclick="confirmConsumption()">Confirmar Consumo</button>
         </div>
     </div>
+
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Confirmação do Consumo</h2>
+            <ul id="popup-list"></ul>
+            <p>Total: R$ <span id="popup-total">0.00</span></p>
+            
+            <!-- Exibir o número do apartamento no popup -->
+            <p><strong>Apartamento:</strong> <span id="popup-apartment"></span></p>
+
+            <button onclick="openEditMode()">Editar</button>
+            <button onclick="finalizeConsumption()" id="whatsapp-btn">Confirmar</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
