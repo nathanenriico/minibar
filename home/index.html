@@ -36,7 +36,7 @@
             
             <!-- Campo para inserir número do apartamento -->
             <label for="apartment-number">Número do Apartamento:</label>
-            <input type="text" id="apartment-number" placeholder="Informe o número do apartamento">
+            <input type="text" id="apartment-number" placeholder="Número do apartamento">
             
             <button onclick="confirmConsumption()">Confirmar Consumo</button>
         </div>
@@ -55,6 +55,31 @@
             <button onclick="finalizeConsumption()" id="whatsapp-btn">Confirmar</button>
         </div>
     </div>
+
+    <div id="warning-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Aviso</h2>
+            <p>Por favor, insira o número do apartamento antes de confirmar o consumo.</p>
+            <button onclick="closeWarningPopup()">Fechar</button>
+        </div>
+    </div>
+    <div id="chatbot" class="chatbot">
+        <div class="chat-header">
+            <span>🤖 Assistente Virtual</span>
+            <button onclick="toggleChat()">✖</button>
+        </div>
+        
+        <div class="chat-body" id="chat-body">
+            <p>Olá! Como posso ajudar?</p>
+            <button onclick="sendMessage('Como conferir meu consumo?')">📋 Como conferir meu consumo?</button>
+            <button onclick="sendMessage('O que fazer se um item sumiu?')">❓ O que fazer se um item sumiu?</button>
+            <button onclick="sendMessage('Posso pagar pelo WhatsApp?')">💳 Posso pagar pelo WhatsApp?</button>
+            <button class="whatsapp-btn" onclick="redirectToWhatsApp()">📞 Falar com a recepção</button>
+        </div>
+    </div>
+    
+    <button id="chat-toggle" class="chat-toggle" onclick="toggleChat()">💬 Ajuda</button>
+    
 
     <script src="script.js"></script>
 </body>
